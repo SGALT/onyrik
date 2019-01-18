@@ -31,7 +31,7 @@
   <!-- Onyrik description / Social Network Flow</p> -->
   <div class="row">
     <div class="col-xs-12 col-sm-6">
-      <div class="card mb-3 bg-dark">
+      <div class="card mb-3 bg-dark rounded">
         <%= image_tag("logotransparent.png", alt: "Card image cap", class: "card-img-top mx-auto", style: "max-height: 200px; max-width: 200px;") %>
         <div class="card-body">
           <p class="card-text">
@@ -44,15 +44,8 @@
       </div>
     </div>
     <div class="col-xs-12 col-sm-6">
-      <div class="card mb-3 bg-dark">
-        <%= image_tag("logotransparent.png", alt: "Card image cap", class: "card-img-top mx-auto", style: "max-height: 200px; max-width: 200px;") %>
-        <div class="card-body">
-          <p class="card-text">
-            A BOSSER
-          </p>
-          <p class="card-text">
-            ICI IDEALEMENT LE FLUX FACEBOOK
-          </p>
+      <div class="card mb-3 bg-dark rounded">
+        <div id="map" style="width: 100%; height: 300px;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
         </div>
       </div>
     </div>
@@ -67,7 +60,7 @@
     <p class="line"></p>
     <ul class="logos-list">
       <li class="logos-list__item">
-        <%= image_tag("logotransparent.png", class: "logos-list__image", alt: "logo", width: "100") %>
+        <%= image_tag("gasconha.png", class: "logos-list__image", alt: "logo", width: "100") %>
       </li>
       <li class="logos-list__item">
         <%= image_tag("logotransparent.png", class: "logos-list__image", alt: "logo", width: "100") %>
