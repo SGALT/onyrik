@@ -1,8 +1,7 @@
 <div class="container">
-  <h1>Onyrik</h1>
 
   <!-- Events Caroussel -->
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <div id="carouselExampleIndicators" class="carousel slide mb-3" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -29,7 +28,60 @@
     </a>
   </div>
 
-  <p>Onyrik desc / Social Network Flow</p>
-  <p>Partenaires</p>
-  <p>Footer </p>
+  <!-- Onyrik description / Social Network Flow</p> -->
+  <div class="row">
+    <div class="col-xs-12 col-sm-6">
+      <div class="card mb-3 bg-dark">
+        <%= image_tag("logotransparent.png", alt: "Card image cap", class: "card-img-top mx-auto", style: "max-height: 200px; max-width: 200px;") %>
+        <div class="card-body">
+          <p class="card-text">
+            Bar ambiance ludique, geek et chic.
+          </p>
+          <p class="card-text">
+            Une taverne médiévale, un vaisseau spatial, une ludothèque et des soirées à thèmes n'attendent que vous !
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6">
+      <div class="card mb-3 bg-dark">
+        <%= image_tag("logotransparent.png", alt: "Card image cap", class: "card-img-top mx-auto", style: "max-height: 200px; max-width: 200px;") %>
+        <div class="card-body">
+          <p class="card-text">
+            A BOSSER
+          </p>
+          <p class="card-text">
+            ICI IDEALEMENT LE FLUX FACEBOOK
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Partenaires -->
+  <div class="partners">
+    <h3>
+      LES PARTENAIRES ONYRIK
+    </h3>
+    <p class="line"></p>
+    <ul class="logos-list">
+      <li class="logos-list__item">
+        <%= image_tag("logotransparent.png", class: "logos-list__image", alt: "logo", width: "100") %>
+      </li>
+      <li class="logos-list__item">
+        <%= image_tag("logotransparent.png", class: "logos-list__image", alt: "logo", width: "100") %>
+      </li>
+      <li class="logos-list__item">
+        <%= image_tag("logotransparent.png", class: "logos-list__image", alt: "logo", width: "100") %>
+      </li>
+    </ul>
+    <p class="line_full"></p>
+  </div>
+
+
+  <!-- Footer -->
+
+
+
 </div>

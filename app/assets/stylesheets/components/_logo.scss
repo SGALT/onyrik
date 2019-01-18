@@ -1,0 +1,41 @@
+.logos-list {
+  margin: 0;
+  padding: 0;
+  height: 45vh;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+
+  &__item {
+    margin-left: 40px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__image {
+    filter: brightness(0) opacity(0.22) drop-shadow(0 0 0 rgb(21, 43, 63));
+    transition: filter 0.3s ease-in-out;
+
+    &:hover {
+      filter: none;
+    }
+  }
+}
+
+.line{
+  width: 20em;
+  height: 0.1em;
+  background: white;
+  margin-left: auto;
+  margin-right: 1px;
+  margin-top: -13px;
+}
+
+.line_full{
+  min-width: 20em;
+  height: 0.1em;
+  background: white;
+}
