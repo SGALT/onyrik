@@ -1,5 +1,8 @@
-<h2><%= @event.title %><h2>
-<p><%= @event.photo %><p>
-<p><%= @event.date %><p>
-<p><%= @event.hour %><p>
-<p><%= @event.content %><p>
+<div class="container">
+  <h2><%= @event.title %><h2>
+  <%= cl_image_tag(@event.photo,
+        width: 400, height: 300, crop: :fit) %>
+  <p><%= @event.date %><p>
+  <p><%= @event.hour %><p>
+  <p><%= @event.content %><p>
+</div>
