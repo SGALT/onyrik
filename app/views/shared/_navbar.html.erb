@@ -15,12 +15,21 @@
           <li class="nav-item">
             <%= link_to "Mon profil", edit_user_registration_path, class:"nav-link d-inline" %>
           </li>
+          <li class="nav_item">
+            <%= link_to "Evenements", events_path, class:"nav-link d-inline" %>
+          </li>
+          <li class="nav_item">
+            <%= link_to "Nouvel Evenement", new_event_path, class:"nav-link d-inline" %>
+          </li>
           <li class="nav-item">
             <%= link_to 'Deconnexion', destroy_user_session_path, class:"nav-link d-inline", method: :delete %>
           </li>
         <% else %>
           <li class="nav-item">
             <%= link_to "Mon profil", edit_user_registration_path, class:"nav-link d-inline" %>
+          </li>
+          <li class="nav_item">
+            <%= link_to "Evenements", events_path, class:"nav-link d-inline" %>
           </li>
           <li class="nav-item">
             <%= link_to 'Deconnexion', destroy_user_session_path, class:"nav-link d-inline", method: :delete %>
