@@ -1,12 +1,15 @@
+<!-- Ajouter condition avec dates -->
 <div class="container">
   <% if !@events.empty? %>
     <% @events.each do |event| %>
-        <h2><%= event.title %><h2>
-        <p><%= event.date %><p>
-        <p><%= event.hour %><p>
-        <%= cl_image_tag(event.photo,
-      width: 400, height: 300, crop: :fit) %>
-        <p><%= event.content %><p>
+      <div class="card mb-3">
+        <%= cl_image_tag(event.photo, class: "card-img-top", alt: "Card image") %>
+        <div class="card-body" style="background-color: rgba(100, 100, 100, 1);">
+          <h1 class="card-title"><%= event.title %></h1>
+          <p class="card-text">le <%= event.date %> <%= event.hour %></p>
+          <p class="card-text"><%= event.content %></p>
+        </div>
+      </div>
     <% end %>
   <% end %>
 </div>
