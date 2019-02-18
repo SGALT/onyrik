@@ -28,7 +28,7 @@
 .line{
   width: 20em;
   height: 0.1em;
-  background: white;
+  background: rgba(100, 100, 100, 1);
   margin-left: auto;
   margin-right: 1px;
   margin-top: -13px;
@@ -37,5 +37,5 @@
 .line_full{
   min-width: 20em;
   height: 0.1em;
-  background: white;
+  background: rgba(100, 100, 100, 1);
 }
