@@ -8,6 +8,9 @@
         <% if @event.users.ids != current_user.id && !current_user.admin %>
           <%= link_to "S'inscrire",  event_registrations_path(@event), method: :post, class: 'btn btn-danger btn-block rounded'%>
         <% end %>
+        <% if current_user.admin %>
+            <%= link_to 'Editer', edit_event_path(@event), class: 'btn btn-danger' %>
+        <% end %>
     </div>
   </div>
   <div class="container bg-dark">
