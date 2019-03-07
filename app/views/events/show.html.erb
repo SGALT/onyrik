@@ -5,6 +5,20 @@
       <h1 class="card-title"><%= @event.title %></h1>
         <p class="card-text">le <%= @event.date %> <%= @event.hour %></p>
         <p class="card-text"><%= @event.content %></p>
+        <% if @event.users.ids != current_user.id && !current_user.admin %>
+          <%= link_to "S'inscrire",  event_registrations_path(@event), method: :post, class: 'btn btn-danger btn-block rounded'%>
+        <% end %>
     </div>
   </div>
+  <div class="container bg-dark">
+  <% if current_user.admin %>
+    <h2>Liste des inscrits </h2>
+    <% @event.users.each do |user| %>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item bg-dark"><%= user.email %> / <%= user.first_name %></li>
+    </ul>
+    <% end %>
+  <% end %>
+  </div>
 </div>
+
