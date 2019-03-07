@@ -1,35 +1,44 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div class="container-fluid">
+  <h2 class="text-center">Edites ton profil</h2>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= f.error_notification %>
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
+    <div class="form-inputs">
+      <%= f.input :first_name, label: 'Prénom' %>
+      <%= f.input :last_name, label: 'Nom de famille'  %>
+      <%= f.input :pseudo, label: 'Pseudo'  %>
+      <%= f.input :birthdate, as: :string, required: false, input_html: {class: "datepicker"}, label: 'Date de naissance'  %>
+      <%= f.input :email, required: true, autofocus: true %>
 
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-      <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
-    <% end %>
+      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+      <% end %>
 
-    <%= f.input :password,
-                hint: "leave it blank if you don't want to change it",
-                required: false,
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: false,
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :current_password,
-                hint: "we need your current password to confirm your changes",
-                required: true,
-                input_html: { autocomplete: "current-password" } %>
-  </div>
+      <%= f.input :password,
+                  hint: "Ne rien remplir si vous ne souhaitez pas le modifier",
+                  required: false,
+                  input_html: { autocomplete: "new-password" },
+                  label: 'Mot de passe'  %>
+      <%= f.input :password_confirmation,
+                  required: false,
+                  input_html: { autocomplete: "new-password" },
+                  label: 'Confirmation du mot de passe'  %>
+      <%= f.input :current_password,
+                  hint: "Nous avons besoin de votre mot de passe actuel pour valider le changement",
+                  required: true,
+                  input_html: { autocomplete: "current-password" },
+                   label: 'Mot de passe actuel'  %>
+    </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Update" %>
-  </div>
-<% end %>
+    <div class="form-actions">
+      <%= f.button :submit, "Mise à jour", class: "btn btn-dark" %>
+    </div>
+  <% end %>
 
-<h3>Cancel my account</h3>
+  <h3>Suppression du compte</h3>
 
-<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+  <p>Mécontent? <%= link_to "Supprimer mon compte", registration_path(resource_name), data: { confirm: "Etes- vous sûr ?" }, method: :delete %></p>
 
-<%= link_to "Back", :back %>
+  <%= link_to "Retour", :back, class: "btn btn-dark mb-1" %>
+</div>
