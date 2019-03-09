@@ -5,11 +5,11 @@
       <div class="blog-card">
         <div class="meta">
           <div class="photo" >
-          <%= cl_image_tag(event.photo, class: "photo-image", alt: "Card image") %>
+          <%= cl_image_tag(event.photo, class: "img-fluid", alt: "Card image", style: "object-fit: contain; height: 100%;") %>
           </div>
           <ul class="details">
-            <li class="author">Onyrik</li>
-            <li class="date"><%= event.date %></li>
+            <li class="author"><%= event.title %></li>
+            <li class="date "><i class="far fa-calendar-alt ml-1"></i> <%= event.date %></li>
           </ul>
         </div>
         <div class="description">
