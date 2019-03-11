@@ -1,0 +1,151 @@
+.logo {
+  font-weight:700;
+  color:black;
+  cursor:pointer;
+  text-align:left;
+  vertical-align:middle;
+  display:inline-block;
+}
+
+span.red {
+  color:red;
+  border-bottom:3px solid red;
+}
+
+img.thumbnail {
+  width:30px;
+  margin-right:5px;
+  border:1px solid #d9d9d9;
+  border-radius:50%;
+  vertical-align:middle;
+}
+
+#post-stream {
+  width:500px;
+  margin:0 auto;
+  margin-top:20px;
+}
+
+#post {
+  background-color:#fff;
+  padding:10px 10px 10px 10px;
+  border-radius:3px;
+  box-shadow: 0 0.5px 0 0 #ffffff inset, 0 1px 2px 0 #B3B3B3;
+  overflow:hidden;
+}
+
+#cont-btn {
+  width:500px;
+  margin:0 auto;
+  margin-top:20px;
+}
+
+#cont {
+  padding:10px 10px 10px 10px;
+}
+
+#post-header {
+  padding-bottom:10px;
+  border-bottom:1px solid #d9d9d9;
+}
+
+a {
+  text-decoration:none;
+  color:inherit;
+}
+
+a:hover {
+  text-decoration:underline;
+}
+
+#author-time-info {
+  vertical-align:middle;
+  display:inline-block;
+}
+
+#author-time-info span.author {
+  color:#3677ba;
+  font-size:15px;
+  font-weight:700;
+  margin-right:2px;
+}
+
+#author-time-info span.time {
+  color:grey;
+  font-weight:100;
+  font-size:10px;
+  text-transform:uppercase;
+}
+
+#post-content {
+  margin-top:10px;
+  padding:0px 5px 10px 5px;
+  border-bottom:1px solid #d9d9d9;
+}
+
+p {
+  padding:0px;
+  margin:0px;
+  margin-top:5px;
+}
+
+#img-container {
+  margin-top:10px;
+  height:245px;
+  border-radius:3px;
+  border-bottom-left-radius:0px;
+  border-bottom-right-radius:0px;
+  overflow:hidden;
+}
+
+img.cover {
+  margin:-80px 0px 0px -10px;
+  display:block;
+  object-fit: cover;
+}
+
+#img-caption {
+  background-color:#ededed;
+  padding:10px 20px 10px 20px;
+  border:1px solid #c2c2c2;
+  border-bottom-left-radius:3px;
+  border-bottom-right-radius:3px;
+}
+
+span.img-title {
+  font-size:20px;
+  font-weight:700;
+  margin-right:8px;
+}
+
+span.description {
+  font-size:13px;
+  width:100%;
+  padding-left:10px;
+  vertical-align:middle;
+  border-left:2px solid #000;
+  display:inline-block;
+}
+
+#img-caption a {
+  font-size:10px;
+  color:#3677ba;
+  margin-top:6px;
+  display:inline-block;
+}
+
+#post-actions {
+  color:#3677ba;
+  font-weight:100;
+  font-size:10px;
+  text-transform:uppercase;
+  padding-bottom:5px;
+  padding-left:5px;
+  margin-top:5px;
+  border-bottom:1px solid #d9d9d9;
+}
+
+span.separator {
+  margin-left:3px;
+  margin-right:3px;
+}
