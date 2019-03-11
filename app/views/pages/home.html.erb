@@ -39,22 +39,48 @@
   <!-- Onyrik description / Map</p> -->
   <div class="row">
     <div class="col-xs-12 col-sm-6">
-      <div class="card mb-3 bg-dark rounded" style="height: 302px;">
-        <%= image_tag("logotransparent.png", alt: "Card image cap", class: "card-img-top mx-auto", style: "max-height: 150px; max-width: 150px;") %>
+      <div class="card mb-3 bg-dark rounded">
+        <%#= image_tag("logotransparent.png", alt: "Card image cap", class: "card-img-top mx-auto", style: "max-height: 150px; max-width: 150px;") %>
         <div class="card-body">
-          <h1 class="card-text text-dark">
-            Onyrik
-          </h1>
-          <p class="card-text">
+          <h1 class="card-text h2">
             Bar ambiance ludique, geek et chic !
+          </h1>
+          <p class="card-text mb-2">
+            Une taverne médiévale, un vaisseau spatial, une ludothèque et des soirées à thèmes n'attendent que vous ! Plus de description !
           </p>
-          <p class="card-text">
-            Une taverne médiévale, un vaisseau spatial, une ludothèque et des soirées à thèmes n'attendent que vous !
-          </p>
+          <br>
+          <%= link_to('https://twitter.com/onyrikofficiel', target: 'blank') do %>
+            <i class="fab fa-twitter" style="font-size: 30px;"></i>
+          <% end %>
+          <%= link_to('https://www.facebook.com/onyrikofficiel/', target: 'blank') do %>
+            <i class="fab fa-facebook-f" style="font-size: 30px;"></i>
+          <% end %>
         </div>
       </div>
     </div>
     <div class="col-xs-12 col-sm-6">
+      <div class="card mb-3 bg-dark rounded">
+        <%#= image_tag("logotransparent.png", alt: "Card image cap", class: "card-img-top mx-auto", style: "max-height: 150px; max-width: 150px;") %>
+        <div class="card-body">
+          <h2 class="card-text h2">
+            Comment se rendre dans notre taverne :
+          </h2>
+          <p class="card-text">
+            en tram / bus ou voiture. Parking gratuit pour voitures
+          </p>
+          <p class="card-text">
+            en tram / bus ou voiture. Parking gratuit pour voitures
+          </p>
+          <p class="card-text">
+            en tram / bus ou voiture. Parking gratuit pour voitures
+          </p>
+          <p class="card-text">
+            en tram / bus ou voiture. Parking gratuit pour voitures
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12">
       <div class="card mb-3 bg-dark rounded">
         <div id="map" style="width: 100%; height: 300px;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
         </div>
