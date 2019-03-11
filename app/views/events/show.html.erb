@@ -37,4 +37,14 @@
         <%= link_to "S'inscrire",  event_registrations_path(@event), method: :post, class: "btn btn-danger btn-block rounded mt-1" %>
       <% end %>
     </div>
+    <div class="container bg-dark mt-2">
+      <% if current_user.admin %>
+        <h2>Liste des inscrits </h2>
+        <% @event.users.each do |user| %>
+          <ul class="list-group list-group-flush">
+          <li class="list-group-item bg-dark"><%= user.email %> / <%= user.first_name %> / <%= user.last_name %></li>
+          </ul>
+        <% end %>
+      <% end %>
+  </div>
   </div>
