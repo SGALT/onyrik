@@ -1,3 +1,4 @@
+ <div class="container-fluid">
   <div id="post-stream" class="mb-2">
     <div id="post">
       <div id="post-header">
@@ -23,7 +24,7 @@
         </div>
       </div>
       <div id="post-actions">
-        <% if current_user.admin %>
+        <% if !current_user.nil? && current_user.admin%>
           <%= link_to 'Editer', edit_event_path(@event) %>
           <span class="separator">·</span>
           <%= link_to 'Supprimer', event_path(@event), method: :delete, data: { confirm: 'Etes-vous sûr ?' } %>
@@ -33,12 +34,15 @@
         <span class="separator">·</span>
         <%= link_to 'Retour liste', events_path %>
       </div>
-      <% if !@event.users.ids.include?(current_user.id) && !current_user.admin %>
+      <% if !current_user.nil? && !@event.users.ids.include?(current_user.id) && !current_user.admin %>
         <%= link_to "S'inscrire",  event_registrations_path(@event), method: :post, class: "btn btn-danger btn-block rounded mt-1" %>
+      <% end %>
+      <% if !current_user.nil? && !current_user.admin && @event.users.ids.include?(current_user.id) %>
+        <%= link_to "Se désinscrire", event_registration_path(@event), method: :delete, class: "btn btn-light btn-block rounded mt-1 text-info" %>
       <% end %>
     </div>
     <div class="container bg-dark mt-2">
-      <% if current_user.admin %>
+      <% if !current_user.nil? && current_user.admin %>
         <h2>Liste des inscrits </h2>
         <% @event.users.each do |user| %>
           <ul class="list-group list-group-flush">
@@ -48,3 +52,4 @@
       <% end %>
   </div>
   </div>
+ </div>
