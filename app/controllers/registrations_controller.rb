@@ -10,7 +10,7 @@ class RegistrationsController < ApplicationController
 
   def destroy
     @event = Event.find(params[:id])
-    @registration = @event.registrations.find(user_id = current_user.id)
+    @registration = @event.registrations.find_by(user_id: current_user.id)
     @registration.destroy
     redirect_to events_path
   end
